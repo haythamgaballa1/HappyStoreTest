@@ -1,0 +1,31 @@
+.nav-filters-shop ul{
+    font-size: 15px;
+}
+.banar3{
+    border: 3px solid rgb(246, 218, 166);
+    position: sticky;
+    top: 100px;
+}
+.w-40
+{
+    width: 40%;
+}
+.w-45
+{
+    width: 45%;
+}
+.w-80{
+    width: 80%;
+}
+@media (max-width:576px) {
+    .filterss {
+        display: none !important;
+    }
+    .filters-mob{
+        display: inline-block !important;
+    }
+    .Active-filters{
+        display: none !important;
+    }
+}
+

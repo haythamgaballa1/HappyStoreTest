@@ -1,0 +1,122 @@
+/* xs mobile phones */
+@media (max-width:575px),(max-width:1400px)
+{
+    .head-nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+    .head-nav .logo{
+        width: 10px;
+    }
+    .head-nav .logo img{
+        width:100% !important;
+    }
+    .head-content h1::after{
+        display: none;
+    }
+    .head-content h2{
+        width: 300px;
+    }
+    .head-imgs{
+        display: none;
+    }
+    nav .nav-bar {
+        transform: translateY(30px);
+    }
+    nav .nav-bar .links{
+        margin: auto;
+    }
+    nav .nav-bar .search{
+        display: none !important;
+    }
+    nav .nav-bar .links ul li
+    {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .header{
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-bottom: 10px !important;
+    }
+    .header .head-content{
+        width: 90% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-direction: column;
+    }
+    .Categories .Head-title{
+        text-align: center !important;
+    }
+    .Categories .box{
+        margin-bottom: 20px;
+    }
+    .container .prog{
+        text-align: center;
+        margin: auto;
+        color: brown;
+        padding: 10px !important;
+    }
+    .container .prog .bts{
+        display: inline !important;
+    }
+    .p-one{
+        width: 50%;
+    }
+    .center{
+        text-align: center;
+    }
+
+}
+@media (max-width:1770px)
+{
+    .Categories-card .filter {
+        background-color: aqua !important;
+        display: none;
+    }
+}
+@media (min-width:1771px)
+{
+    .filtery{
+        background-color: aqua !important;
+        display: none;
+    }
+}
+
+/* s mobile phones */
+/* @media (min-width:576px) and 
+{
+    .header{
+        color: brown !important;
+        background-color: aqua !important;
+    }
+} */
+
+/* Medium device */
+@media (min-width:768px)(max-width:992px)
+{
+    
+}
+
+/* Large devices */
+@media (min-width:993px)(max-width:1200px)
+{
+    
+}
+
+/* X-Large devices */
+@media (min-width:1201px)(max-width:1400px)
+{
+    
+}
+
+/* Xx-Large devices */
+@media (min-width:14001px)
+{
+    
+}

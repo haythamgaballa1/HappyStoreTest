@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav >
+        <div class="head-nav cont">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+        </div>
+        <div class="nav-bar">
+            <div class="links">
+                <ul >
+                    <li class=""><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Shop</a></li>
+                    <li>About</li>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </div>
+            <div class="log links d-flex justify-content-center align-items-center">
+                <div>
+                    <ul class="d-flex justify-content-center align-items-center">
+                        <li class="me-2"><a href="login.html">Login</a></li>
+                            <li><a href="signup.html">Signup</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="back">
+        <div class="form">
+            <div class="form-cont p-4 text-center">
+                <h2>Login</h2>
+                <hr>
+                <input class="w-75 " type="text" name="Username" placeholder="Username" id="userName">
+                <div id="user-name-wrong" style="color: red;" class="mb-4"></div>
+                <input class="w-75" type="Password" name="Password" placeholder="Password"id="password">
+                <div id="password-wrong" style="color: red;" class="mb-4"></div>
+                <hr>
+                <a href="" id="Forget-pass">Forget Password ?</a>
+                <button class="w-100 btn btn-outline-dark my-3 rounded-5" type="button" onclick="login()">Login</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <iframe class="rounded-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55253.65946851847!2d31.367830497900396!3d30.05539391555095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583c1380cba7ef%3A0xd541260e9e06978d!2z2YXYr9mK2YbYqSDZhti12LHYjCDZhdit2KfZgdi42Kkg2KfZhNmC2KfZh9ix2KnigKw!5e0!3m2!1sar!2seg!4v1689423634178!5m2!1sar!2seg" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="p-one col-md-4 p-4">
+                            <h5>Links</h5>
+                            <ul>
+                                <ul>
+                                    <a href="index.html"><li>Home</li></a>
+                                    <a href="Shop.html"><li>Shop</li></a>
+                                    <li>Blog</li>
+                                    <li>About</li>
+                                    <a href="Contact.html"><li>Contact</li></a>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 p-one text-center p-4">
+                            <h5>Contacts</h5>
+                            <ul>
+                                <ul class="d-flex align-items-center justify-content-center">
+                                    <a href=""><li class="me-2"><i class="fa-brands fa-facebook fa-lg "></i></li></a>
+                                    <a href=""><li class="me-2"><i class="fa-brands fa-whatsapp fa-lg"></i></li></a>
+                                    <a href=""><li class="me-2"><i class="fa-brands fa-youtube fa-lg"></i></li></a>
+                                    <a href=""><li><i class="fa-brands fa-linkedin fa-lg"></i></li></a>
+                                </ul>
+                            </ul>
+                            <p class="my-3"><i class="fa-solid fa-phone me-2"></i>Call : 0123456789</p>
+                        </div>
+                        <div class="col-md-4 center p-4">
+                            <h5>Links</h5>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6 p-4">
+                            <h5 class="center">Lorem</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eos possimus fugit veniam nam hic impedit, voluptatibus dicta voluptatem est. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, laudantium!</p>
+                        </div>
+                        <div class="col-md-6  center p-4">
+                            <h5>Help</h5>
+                            <ul>
+                                <a href=""><li>Ordaring</li></a>
+                                <a href=""><li>Payment</li></a>
+                                <a href=""><li>Delivery</li></a>
+                                <a href=""><li>FAQ'S</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" d-flex align-items-center justify-content-center p-3 bg-dark rounded-2">
+            <div id="copyright" class="text-light">&copy; 2023 - 2023 Haytham gaballa</div>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>
