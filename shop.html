@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tag For Res -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Happy Store</title>
+    <!-- Fav Icon -->
+    <link rel='shortcut icon' type='image/png' href='images/store icon.png'>
+     <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- owlcarousel css -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- animation -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font awsem -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- responsive Style Sheet -->
+    <link rel="stylesheet" href="css/responseve.css">
+    <!--Global Style Sheet  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Shop Style Sheet -->
+    <link rel="stylesheet" href="css/shop.css">
+
+</head>
+
+<body  class="position-relative overflow-hidden" >
+    <div class="loading">
+        <span class="loader"></span>
+    </div>
+
+    <div class="settings d-flex" style="left: -85px; top: 50%; position: fixed; transition: 1s; z-index: 232323;">
+        <div class="settings-content d-flex align-items-center justify-content-center flex-column " style="width: 80px; background-color: rgb(69, 69, 69); color: white;">
+            <i class="dark-mode fa-solid fa-moon p-3 fs-4 cursor-pointer"></i>
+        </div>
+        <i style="z-index: 10000;" class="setting cursor-pointer fa-solid fa-gear fs-3 px-2"></i>
+    </div>
+    <div class="nav_icon nav-bg container-flued">
+        <div class="text-light p-2 border-1  d-flex align-items-center justify-content-between container">
+            <span class="m-0" id="element"></span>
+            <div class="d-flex align-items-center justify-content-center">
+                <div class="social_icon d-flex align-items-center justify-content-center border-end pe-4">
+                    <span class="pe-3">Follow Us:</span>
+                    <ul class="contact_icon m-0 d-flex align-items-center list-type-none">
+                        <li class="me-2"><a href="#"><i class="fa-brands fa-twitter text-light"></i></a></li>
+                        <li class="me-2"><a href="#"><i class="fa-brands fa-facebook text-light"></i></a></li>
+                        <li class="me-2"><a href="#"><i class="fa-brands fa-pinterest-p text-light"></i></a></li>
+                        <li class="me-2"><a href="#"><i class="fa-brands fa-youtube text-light"></i></a></li>
+                        <li class="me-2"><a href="#"><i class="fa-brands fa-instagram text-light"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-discord  text-light"></i></a></li>
+                    </ul>
+                </div>
+                <div class="lang_currncy d-flex align-items-center justify-content-center">
+                    <div class="langs">
+                        <Select>
+                            <option value="Lang">Lang اللغة</option>
+                            <option value="Arabic">Arabic عربي</option>
+                            <option value="English">English أنجليزي</option>
+                        </Select>
+                    </div>
+                    <div class="currncy">
+                        <div class="">
+                            <Select>
+                                <option value="USD">USD دولار</option>
+                                <option value="EGY">EGY جنية</option>
+                                <option value="EUR">EUR يورو</option>
+                            </Select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav style="position: sticky; top: 0;" class="nav-bg p-3 nav-logo">
+        <div class="container d-flex align-items-center justify-content-between">
+            <i class="fa-solid fa-bars text-light fs-4 menu d-none"></i>
+            <div class="logo">
+                <img class="w-100" src="images/logo.png" alt="">
+            </div>
+            <div class="search w-50 bg-light d-flex align-items-center">
+                <input class="w-100" type="text" placeholder="Search For Anything">
+                <i class="fa-solid fa-magnifying-glass me-2"></i>
+            </div>
+            <ul class="d-flex align-items-center justify-content-center text-light m-0">
+                <li class="position-relative">
+                    <i class="fa-solid fa-cart-shopping fs-4 me-4 cursor-pointer"></i>
+                    <div
+                        class="cart-count position-absolute top-0 start-0 translate-middle badge rounded-pill bg-light text-dark">
+                        0
+                    </div>
+                </li>
+                <li>
+                    <i id="favorites" class="fa-regular fa-heart hover  hover fs-4 me-4"></i>
+                </li>
+                <li><i class="fa-regular fa-user fs-4"></i></li>
+            </ul>
+        </div>
+        <div class="Cart-box position-absolute " style="display: none"> 
+            <div class="w-100">
+                <button class="btn btn-success w-100 mt-2 checkOut">Check Out</button>
+                <button class="btn btn-danger w-100 my-2 closeCart">Close</button>
+            </div>
+         </div>
+         <div class="sidebar position-absolute" style="left: -100% ;
+         ">
+             <div class="d-flex justify-content-between align-items-center flex-column my-2 p-3">
+                 <i class="fa-solid fa-xmark close text-light fs-2 align-self-start text-center cursor-pointer"></i>
+                 <ul class="mt-3 fs-5 d-flex justify-content-center flex-column align-items-center">
+                     <li class="my-1 hover"><a href="shop.html">Shop Product</a></li>
+                     <li class="my-1 hover"><a href="#">Shoping Cart</a></li>
+                     <li class="my-1 hover"><a href="#">Wishlist</a></li>
+                     <li class="my-1 hover"><a href="#">Compare</a></li>
+                     <li class="my-1 hover"><a href="#">Track Order</a></li>
+                     <li class="my-1 hover"><a href="#">Customer Help</a></li>
+                     <li class="my-1 hover"><a href="#">About Us</a></li>
+                 </ul>
+                 <ul class="contact_icon my-2 d-flex align-items-center justify-content-center list-type-none">
+                     <li class="me-2"><a href="#"><i class="fa-brands fa-twitter text-light"></i></a></li>
+                     <li class="me-2"><a href="#"><i class="fa-brands fa-facebook text-light"></i></a></li>
+                     <li class="me-2"><a href="#"><i class="fa-brands fa-pinterest-p text-light"></i></a></li>
+                     <li class="me-2"><a href="#"><i class="fa-brands fa-youtube text-light"></i></a></li>
+                     <li class="me-2"><a href="#"><i class="fa-brands fa-instagram text-light"></i></a></li>
+                     <li><a href="#"><i class="fa-brands fa-discord  text-light"></i></a></li>
+                 </ul>
+             </div>
+         </div>
+    </nav>
+    <div class="nav-filters-one d-none  text-dark">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center justify-content-center py-3">
+                <div class="filters px-3 py-2 me-2">
+
+                    <select name="" id="" class="text-dark">
+                        <option value="Computers">All Category</option>
+                        <option value="Computers">Men Clothing</option>
+                        <option value="Computers">Women Clothing</option>
+                        <option value="Computers">Jewelry</option>
+                        <option value="Computers">Electonics</option>
+                        <option value="Computers">Computer & Laptop</option>
+                        <option value="Computers">Computer Accessories</option>
+                        <option value="Computers">SmartPhone</option>
+                        <option value="Computers">Mobile Accessories</option>
+                        <option value="Computers">Gaming Console</option>
+                        <option value="Computers">Camera & Photo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="number d-flex align-items-center justify-content-center">
+                <i class="fa-solid fa-phone me-3 fs-4"></i>
+                <p class="m-0 fs-4">+022-6564-464</p>
+            </div>
+        </div>
+    </div>
+    <div class="nav-filters text-dark">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center justify-content-center py-3">
+                <div class="filters px-3 py-2 me-2">
+
+                    <select name="" id="" class="text-dark">
+                        <option value="Computers">All Category</option>
+                        <option value="Computers">Men Clothing</option>
+                        <option value="Computers">Women Clothing</option>
+                        <option value="Computers">Jewelry</option>
+                        <option value="Computers">Electonics</option>
+                        <option value="Computers">Computer & Laptop</option>
+                        <option value="Computers">Computer Accessories</option>
+                        <option value="Computers">SmartPhone</option>
+                        <option value="Computers">Mobile Accessories</option>
+                        <option value="Computers">Gaming Console</option>
+                        <option value="Computers">Camera & Photo</option>
+                    </select>
+                </div>
+                <div class="Track position-relative px-3 py-2  me-2 ">
+                    <a href="#" class="text-secondary hover">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Track Order
+                    </a>
+                </div>
+                <div class="Track px-3 py-2  me-2">
+                    <a href="#" class="text-secondary hover">
+                        <i class="fa-solid fa-code-compare"></i>
+                        Compare
+                    </a>
+                </div>
+                <div class="Track px-3 py-2  me-2">
+                    <a href="#" class="text-secondary hover">
+                        <i class="fa-solid fa-headphones"></i>
+                        Customer Support
+                    </a>
+                </div>
+                <div class="Track px-3 py-2  me-2">
+                    <a href="#" class="text-secondary hover">
+                        <i class="fa-solid fa-info "></i>
+                        Need Help
+                    </a>
+                </div>
+            </div>
+            <div class="number d-flex align-items-center justify-content-center">
+                <i class="fa-solid fa-phone me-3 fs-5"></i>
+                <p class="m-0 fs-5">+022-6564-464</p>
+            </div>
+        </div>
+    </div>
+    <div class="nav-filters-shop text-dark bg-gray-900 py-4">
+        <div class="container d-flex align-items-center justify-content-between">
+            <ul class="d-flex align-items-center justify-content-center" >
+                <li class="me-4"><i class="fa-solid fa-house text-gray"></i></li>
+                <li class="me-4 "><a href="index.html" class="text-gray">Home <i class="fa-solid fa-chevron-right "></i></a></li>
+                <li class="me-4"><a href="#" class="text-gray">Shop <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#">All <i class="fa-solid fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="product-lest mt-5">
+        <div class="container">
+            <div class="d-flex">
+                <div class="filterss w-30 pb-3">
+                    <div class="Category">
+                        <h6>CATEGORY</h6>
+                        <ul class="mt-3">
+                            <li class="form-check mb-1">
+                                <input class="form-check-input "  type="radio" name="flexRadioDefault" id="allProduct" value="products/">
+                                <label class="form-check-label" for="allProduct">All Products</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="men" value="products/category/men's clothing">
+                                <label class="form-check-label" for="men">men</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="womenclothing" value="products/category/women's clothing">
+                                <label class="form-check-label" for="womenclothing">women</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="jewelery" value="jewelery">
+                                <label class="form-check-label" for="jewelery">Jewelery</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="electronics" value="electronics">
+                                <label class="form-check-label" for="electronics">Electronics</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="Electronics">
+                                <label class="form-check-label" for="Electronics">Electronics Devices</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="Computer">
+                                <label class="form-check-label" for="Computer">Computer & Laptop</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="Accessories">
+                                <label class="form-check-label" for="Accessories">Computer Accessories</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="SmartPhone">
+                                <label class="form-check-label" for="SmartPhone">SmartPhone</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="Headphone">
+                                <label class="form-check-label" for="Headphone">Headphone</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="Gaming">
+                                <label class="form-check-label" for="Gaming">Gaming Console</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="Camera">
+                                <label class="form-check-label" for="Camera">Camera & Photo</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr class=" my-3">
+                    <div class="price">
+                        <h6 class="my-2">PRICE RANGE</h6>
+                        <div >
+                            <input type="range" class="form-range" id="customRange1" min="0" max="100" value="0">
+                        </div>
+                        <div class="d-flex my-2 align-items-center justify-content-between">
+                            <input  type="text" placeholder="min-price" class="w-45 form form-control" >
+                            <input type="text" placeholder="max-price" class="w-45 form form-control">
+                        </div>
+                        <ul class="my-3">
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="All-Price">
+                                <label class="form-check-label" for="All-Price">All Price</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="Under$20">
+                                <label class="form-check-label" for="Under$20">Under $20</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="$25to$100">
+                                <label class="form-check-label" for="$25to$100">$25to$100</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="$100to$300">
+                                <label class="form-check-label" for="$100to$300">$100to$300</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="$300to$500">
+                                <label class="form-check-label" for="$300to$500">$300 to $500</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="$500to$1,000">
+                                <label class="form-check-label" for="$500to$1,000"> $500 to $1,000</label>
+                            </li>
+                            <li class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="$1,000to$10,000">
+                                <label class="form-check-label" for="$1,000to$10,000">$1,000 to $10,000</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="popularBrands">
+                        <h6 class="my-2">popular Brands</h6>
+                        <ul class="d-flex flex-wrap my-2">
+                            <li class="w-45"><div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="Apple">
+                                <label class="form-check-label" for="Apple">
+                                    Apple
+                                </label>
+                              </div>
+                            </li>
+                            <li class="w-45"><div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="Google">
+                                <label class="form-check-label" for="Google">
+                                    Google
+                                </label>
+                              </div>
+                            </li>
+                            <li class="w-45"><div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="Microsoft">
+                                <label class="form-check-label" for="Microsoft">
+                                    Microsoft
+                                </label>
+                              </div>
+                            </li>
+                            <li class="w-45"><div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="Samsung">
+                                <label class="form-check-label" for="Samsung">
+                                    Samsung
+                                </label>
+                              </div>
+                            </li>
+                            <li class="w-45"><div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="Dell">
+                                <label class="form-check-label" for="Dell">
+                                    Dell
+                                </label>
+                              </div>
+                            </li>
+                            <li class="w-45"><div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="HP">
+                                <label class="form-check-label" for="HP">
+                                  HP
+                                </label>
+                              </div>
+                            </li>
+                            <li class="w-45"><div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="Symphony">
+                                <label class="form-check-label" for="Symphony">
+                                    Symphony
+                                </label>
+                              </div>
+                            </li>
+                            <li class="w-45"><div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="Xiaomi">
+                                <label class="form-check-label" for="Xiaomi">
+                                    Xiaomi
+                                </label>
+                              </div>
+                            </li>
+                            <li class="w-45"><div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="Sony">
+                                <label class="form-check-label" for="Sony">
+                                    Sony
+                                </label>
+                              </div>
+                            </li>
+                            <li class="w-45"><div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="Panasonic">
+                                <label class="form-check-label" for="Panasonic">
+                                    Panasonic
+                                </label>
+                              </div>
+                            </li>
+                            <li class="w-45"><div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="LG">
+                                <label class="form-check-label" for="LG">
+                                  LG
+                                </label>
+                              </div>
+                            </li>
+                            <li class="w-45"><div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="Intel">
+                                <label class="form-check-label" for="Intel">
+                                    Intel
+                                </label>
+                              </div>
+                            </li>
+                            <li><div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="OnePlus">
+                                <label class="form-check-label" for="OnePlus">
+                                    One Plus
+                                </label>
+                              </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="popularTag">
+                        <h6 class="my-2">popular Tag</h6>
+                        <ul class="d-flex align-items-center justify-content-start flex-wrap mt-3 ">
+                            <li class="p-2 border my-2 me-2 btn btn-warning">Game</li>
+                            <li class="p-2 border my-2 me-2 btn btn-warning">iPhone</li>
+                            <li class="p-2 border my-2 me-2 btn btn-warning">TV</li>
+                            <li class="p-2 border my-2 me-2 btn btn-warning">Asus Laptops</li>
+                            <li class="p-2 border my-2 me-2 btn btn-warning">Macbook </li>
+                            <li class="p-2 border my-2 me-2 btn btn-warning">Graphics Card </li>
+                            <li class="p-2 border my-2 me-2 btn btn-warning">Power Bank </li>
+                            <li class="p-2 border my-2 me-2 btn btn-warning">Smart TV</li>
+                            <li class="p-2 border my-2 me-2 btn btn-warning">Speaker</li>
+                            <li class="p-2 border my-2 me-2 btn btn-warning">Tablet</li>
+                            <li class="p-2 border my-2 me-2 btn btn-warning">Microwave</li>
+                            <li class="p-2 border my-2 me-2 btn btn-warning">Samsung</li>
+    
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="banar3  p-3 d-flex align-items-center justify-content-center flex-column">
+                        <img class="my-3" src="images/img/smart.png" alt="">
+                        <img class="my-3" src="images/img/apple-logo.png" alt="">
+                        <h4  class="text-center my-3">Heavy on Features.<br>
+                            Light on Price.</h4>
+                            <div class="d-flex justify-content-center align-items-center my-2">
+                                <span class="me-2">Only for:</span>
+                                <span class="py-2 px-3 bg-warning">$299 USD</span>
+                            </div>
+                            <button class="button_one btn-orange w-80 mt-2 mb-3"><i class="fa-solid fa-cart-shopping me-2"></i>Add to Cart</button>
+                            <button class="button_two  w-80  p-2 px-4">View Details <i class="fa-solid fa-arrow-right me-2"></i></button>
+                    </div>
+                </div>
+                <div>
+                    <div class="products">
+                    <div class="container">
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center justify-content-between"> 
+                                <div class="search w-50 border d-flex align-items-center">
+                                <input class="w-100" type="text" placeholder="Search For Anything">
+                                <i class="fa-solid fa-magnifying-glass me-2"></i>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center ">
+                                <span class="w-50">Sort by:</span>
+                                <select class="form-select " aria-label="Default select example">
+                                    <option selected>Most Popular</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                            </div>
+                        </div>
+                            <div></div>
+                        </div>
+                        <div class="filters-mob d-none mb-3">
+                            <ul class="d-flex">
+                                <li class="me-2"><select class="form-select " aria-label="Default select example">
+                                    <option selected>Categorys</option>
+                                    <option value="1">Men clothing</option>
+                                    <option value="2">women clothing</option>
+                                    <option value="3">Electonics</option>
+                                  </select></li>
+                                  <li class="me-2"><select class="form-select " aria-label="Default select example">
+                                    <option selected>Price</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select></li>
+                                  <li class="me-2"><select class="form-select " aria-label="Default select example">
+                                    <option selected>Most Popular</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select></li>
+                                  <li>
+                                    <button class="btn btn-danger"><i class="fa-solid fa-arrow-right me-2"></i></button>
+                                  </li>
+                                  
+                            </ul>
+                        </div>
+                        <div class="Active-filters mb-3 py-2 px-3 bg-gray-900 d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center justify-content-between"> 
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="me-2">Active Filters:</span>
+                                    <ul class="d-flex align-items-center justify-content-center">
+                                        <li class="me-3">Electronics Devices <i class="fa-solid fa-xmark"></i></li>
+                                        <li class="me-3">5 Star Rating <i class="fa-solid fa-xmark"></i></li>
+                                        <li class="me-3">Men <i class="fa-solid fa-xmark"></i></li>
+                                    </ul>
+                                </div>
+                        </div>
+                            <div>
+                                <span><span class="fs-5 productsLength"></span> Results found.</span>
+                            </div>
+                        </div>
+                        <div class="row products_list gy-4">
+                             
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer bg-dark text-light pt-5 mt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 d-flex  flex-column">
+                    <img class="w-50 mb-3  logo-footer " src="images/logo.png" alt="">
+                    <span>Customer Supports:</span>
+                    <h5 class="my-2">(629) 555-0129</h4>
+                        <p class="mb-2">4517 Washington Ave. Manchester, Kentucky 39495</p>
+                        <span>info@kinbo.com</span>
+                </div>
+                <div class="col-md-2 link ">
+                    <h6>TOP CATEGORY</h6>
+                    <ul class="mt-3">
+                        <li class="my-1 hover">Computer & Laptop</li>
+                        <li class="my-1 hover">SmartPhone</li>
+                        <li class="my-1 hover">Headphone</li>
+                        <li class="my-1 hover">Accessories</li>
+                        <li class="my-1 hover">Camera & Photo</li>
+                        <li class="my-1 hover">TV & Homes</li>
+                        <div class="button d-flex align-items-center text-warning" justify-content-between w-10">
+                            <h6 class="me-2">Browse All Product</h6>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col-md-2 link">
+                    <h6>QUICK LINKS</h6>
+                    <ul class="mt-3">
+                        <li class="my-1 hover">Shop Product</li>
+                        <li class="my-1 hover">Shoping Cart</li>
+                        <li class="my-1 hover">Wishlist</li>
+                        <li class="my-1 hover">Compare</li>
+                        <li class="my-1 hover">Track Order</li>
+                        <li class="my-1 hover">Customer Help </li>
+                        <li class="my-1 hover">About Us</li>
+
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6>DOWNLOAD APP</h6>
+                    <div class="d-flex align-items-center justify-content-start flex-wrap mt-3 ">
+                        <img class="mb-3  " src="images/img/Mobile App.png" alt="">
+                        <img class="mb-3    " src="images/img/Mobile App (1).png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h6>POPULAR TAG</h6>
+                    <ul class="d-flex align-items-center justify-content-start flex-wrap mt-3 ">
+                        <li class="p-1 border my-2 me-2  hover">Game</li>
+                        <li class="p-1 border my-2 me-2 hover">iPhone</li>
+                        <li class="p-1 border my-2 me-2 hover">TV</li>
+                        <li class="p-1 border my-2 me-2 hover">Asus Laptops</li>
+                        <li class="p-1 border my-2 me-2 hover">Macbook </li>
+                        <li class="p-1 border my-2 me-2 hover">Graphics Card </li>
+                        <li class="p-1 border my-2 me-2 hover">Power Bank </li>
+                        <li class="p-1 border my-2 me-2 hover">Smart TV</li>
+                        <li class="p-1 border my-2 me-2 hover">Speaker</li>
+                        <li class="p-1 border my-2 me-2 hover">Tablet</li>
+                        <li class="p-1 border my-2 me-2 hover">Microwave</li>
+                        <li class="p-1 border my-2 me-2">Samsung</li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div style="border-top: 1px rgba(204, 204, 204, 0.413) solid;" class="text-center p-3 mt-3">
+            <p class="">Develop by Haytham 2023</p>
+        </div>
+    </footer>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- owlcarousel -->
+    <script src="js/jquery.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Happy Store</title>
+    <!-- Fav Icon -->
+    <link rel='shortcut icon' type='image/png' href='images/store icon.png'>
+     <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- owlcarousel css -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- animation -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font awsem -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- responsive Style Sheet -->
+    <link rel="stylesheet" href="css/responseve.css">
+    <!--Global Style Sheet  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- SignUp style sheet -->
+    <link rel="stylesheet" href="css/SignUp.css">
+</head>
+<body  class="position-relative">
+    <div class="settings d-flex" style="left: -85px; top: 50%; position: fixed; transition: 1s; z-index: 232323;">
+        <div class="settings-content d-flex align-items-center justify-content-center flex-column " style="width: 80px; background-color: rgb(69, 69, 69); color: white;">
+            <i class="dark-mode fa-solid fa-moon p-3 fs-4 cursor-pointer"></i>
+        </div>
+        <i style="z-index: 10000;" class="setting cursor-pointer fa-solid fa-gear fs-3 px-2"></i>
+    </div>
+    <div class="nav_sale container-flued bg-dark">
+        <div class="d-flex align-items-center justify-content-between container p-2">
+            <div class="sale_img">
+                <img class="w-100" src="images/Black-Friday-PNG.png" alt="">
+            </div>
+            <div class="sale_content text-light">
+                <h3>Up to <span class="text-danger">50%</span><span>OFF</span></h3>
+            </div>
+            <button class="button_one ">SHOP NOW <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+    <div class="nav_icon nav-bg container-flued">
+        <div class="text-light p-2 border-1  d-flex align-items-center justify-content-between container">
+            <span class="m-0" id="element"></span>
+            <div class="d-flex align-items-center justify-content-center">
+                <div class="social_icon d-flex align-items-center justify-content-center border-end pe-4">
+                    <span class="pe-3">Follow Us:</span>
+                    <ul class="contact_icon m-0 d-flex align-items-center justify-content-center list-type-none">
+                        <li class="me-2"><a href="#"><i class="fa-brands fa-twitter text-light"></i></a></li>
+                        <li class="me-2"><a href="#"><i class="fa-brands fa-facebook text-light"></i></a></li>
+                        <li class="me-2"><a href="#"><i class="fa-brands fa-pinterest-p text-light"></i></a></li>
+                        <li class="me-2"><a href="#"><i class="fa-brands fa-youtube text-light"></i></a></li>
+                        <li class="me-2"><a href="#"><i class="fa-brands fa-instagram text-light"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-discord  text-light"></i></a></li>
+                    </ul>
+                </div>
+                <div class="lang_currncy d-flex align-items-center justify-content-center">
+                    <div class="langs">
+                        <Select>
+                            <option value="Lang">Lang اللغة</option>
+                            <option value="Arabic">Arabic عربي</option>
+                            <option value="English">English أنجليزي</option>
+                        </Select>
+                    </div>
+                    <div class="currncy">
+                        <div class="">
+                            <Select>
+                                <option value="USD">USD دولار</option>
+                                <option value="EGY">EGY جنية</option>
+                                <option value="EUR">EUR يورو</option>
+                            </Select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav style="position: sticky; top: 0;" class="nav-bg p-3 nav-logo">
+        <div class="container d-flex align-items-center justify-content-between">
+            <i class="fa-solid fa-bars text-light fs-4 menu d-none cursor-pointer"></i>
+            <div class="logo">
+                <img class="w-100" src="images/logo.png" alt="">
+            </div>
+            <div class="search w-50 bg-light d-flex align-items-center">
+                <input class="w-100" type="text" placeholder="Search For Anything">
+                <i class="fa-solid fa-magnifying-glass me-2"></i>
+            </div>
+            <ul class="d-flex align-items-center justify-content-center text-light m-0">
+                <li class="position-relative ">
+                    <i class="fa-solid fa-cart-shopping fs-4 me-4"></i>
+                    <div
+                        class="cart-count position-absolute top-0 start-0 translate-middle badge rounded-pill bg-light text-dark">
+                        0
+                    </div>
+                </li>
+                <li>
+                    <i id="favorites" class="fa-regular fa-heart hover  hover fs-4 me-4"></i>
+                </li>
+                <li><i class="fa-regular fa-user fs-4"></i></li>
+            </ul>
+        </div>
+        <div class="sidebar position-absolute" style="left: -100% ;
+        ">
+            <div class="d-flex justify-content-between align-items-center flex-column my-2 p-3">
+                <i class="fa-solid fa-xmark close text-light fs-2 align-self-start text-center cursor-pointer"></i>
+                <ul class="mt-3 fs-5 d-flex justify-content-center flex-column align-items-center">
+                    <li class="my-1 hover"><a href="shop.html">Shop Product</a></li>
+                    <li class="my-1 hover"><a href="#">Shoping Cart</a></li>
+                    <li class="my-1 hover"><a href="#">Wishlist</a></li>
+                    <li class="my-1 hover"><a href="#">Compare</a></li>
+                    <li class="my-1 hover"><a href="#">Track Order</a></li>
+                    <li class="my-1 hover"><a href="#">Customer Help</a></li>
+                    <li class="my-1 hover"><a href="#">About Us</a></li>
+                </ul>
+                <ul class="contact_icon my-2 d-flex align-items-center justify-content-center list-type-none">
+                    <li class="me-2"><a href="#"><i class="fa-brands fa-twitter text-light"></i></a></li>
+                    <li class="me-2"><a href="#"><i class="fa-brands fa-facebook text-light"></i></a></li>
+                    <li class="me-2"><a href="#"><i class="fa-brands fa-pinterest-p text-light"></i></a></li>
+                    <li class="me-2"><a href="#"><i class="fa-brands fa-youtube text-light"></i></a></li>
+                    <li class="me-2"><a href="#"><i class="fa-brands fa-instagram text-light"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-discord  text-light"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-filters-one d-none  text-dark">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center justify-content-center py-3">
+                <div class="filters px-3 py-2 me-2">
+
+                    <select name="" id="" class="text-dark">
+                        <option value="Computers">All Category</option>
+                        <option value="Computers">Men Clothing</option>
+                        <option value="Computers">Women Clothing</option>
+                        <option value="Computers">Jewelry</option>
+                        <option value="Computers">Electonics</option>
+                        <option value="Computers">Computer & Laptop</option>
+                        <option value="Computers">Computer Accessories</option>
+                        <option value="Computers">SmartPhone</option>
+                        <option value="Computers">Mobile Accessories</option>
+                        <option value="Computers">Gaming Console</option>
+                        <option value="Computers">Camera & Photo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="number d-flex align-items-center justify-content-center">
+                <i class="fa-solid fa-phone me-3 fs-4"></i>
+                <p class="m-0 fs-4">+022-6564-464</p>
+            </div>
+        </div>
+    </div>
+    <div class="nav-filters text-dark">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center justify-content-center py-3">
+                <div class="filters px-3 py-2 me-2">
+
+                    <select name="" id="" class="text-dark">
+                        <option value="Computers">All Category</option>
+                        <option value="Computers">Men Clothing</option>
+                        <option value="Computers">Women Clothing</option>
+                        <option value="Computers">Jewelry</option>
+                        <option value="Computers">Electonics</option>
+                        <option value="Computers">Computer & Laptop</option>
+                        <option value="Computers">Computer Accessories</option>
+                        <option value="Computers">SmartPhone</option>
+                        <option value="Computers">Mobile Accessories</option>
+                        <option value="Computers">Gaming Console</option>
+                        <option value="Computers">Camera & Photo</option>
+                    </select>
+                </div>
+                <div class="Track position-relative px-3 py-2  me-2 ">
+                    <a href="#" class="text-secondary hover">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Track Order
+                    </a>
+                </div>
+                <div class="Track px-3 py-2  me-2">
+                    <a href="#" class="text-secondary hover">
+                        <i class="fa-solid fa-code-compare"></i>
+                        Compare
+                    </a>
+                </div>
+                <div class="Track px-3 py-2  me-2">
+                    <a href="#" class="text-secondary hover">
+                        <i class="fa-solid fa-headphones"></i>
+                        Customer Support
+                    </a>
+                </div>
+                <div class="Track px-3 py-2  ">
+                    <a href="#" class="text-secondary hover">
+                        <i class="fa-solid fa-info "></i>
+                        Need Help
+                    </a>
+                </div>
+            </div>
+            <div class="number d-flex align-items-center justify-content-center">
+                <i class="fa-solid fa-phone me-3 fs-5"></i>
+                <p class="m-0 fs-5">+022-6564-464</p>
+            </div>
+        </div>
+    </div>
+<div class="back my-5">
+    <div class="form">
+        <div class="form-cont p-4 text-center">
+            <h2>Signup</h2>
+            <input class="w-75 mb-4 pt-4" type="text" name="Username" placeholder="Username" id="userName">
+            <input class="w-75 mb-4" type="email" name="email" placeholder="email" id="email" required>
+            <input class="w-75 mb-4" type="Password" name="Password" placeholder="Password"id="password">
+            <!-- <input class="w-75" type="rePassword" name="rePassword" placeholder="rePassword"id="repassword"> -->
+            <div id="wrong" style="color: red;" class="mb-4"></div>
+            <hr>
+            <a href="" id="Forget-pass">Forget Password ?</a>
+            <button id="Signup" class="w-100 btn btn-outline-dark my-3 rounded-5" type="submit">Signup</button>
+        </div>
+    </div>
+</div>
+<section class="Subscribe-Sec nav-bg d-flex align-items-center justify-content-center flex-column py-5 text-light">
+    <h2>Subscribe to our newsletter</h2>
+    <p class="w-25 text-center my-2">Praesent fringilla erat a lacinia egestas. Donec vehicula tempor libero et
+        cursus. Donec non quam urna. Quisque vitae porta ipsum.</p>
+    <div class="sub d-flex align-items-center justify-content-between rounded my-3">
+        <input type="text" placeholder="Email Address" style="width: 50% !important;">
+        <button class="button_one btn-orange" style="width: ;">Subscribe <i
+                class="fa-solid fa-arrow-right ms-2"></i></button>
+    </div>
+    <hr width="25%">
+    <ul class="d-flex align-items-center justify-content-center ">
+        <li class="me-md-5"><a href="https://www.google.com/" target="_blank"><img class="w-100" src="images/img/Group 22.png" alt=""></a></li>
+        <li class="me-md-5"><a href="https://www.amazon.co.jp/-/en" target="_blank"><img class="w-100" src="images/img/Frame.png" alt=""></a></i>
+            <li class="me-md-5"><a href="https://www.philips.com.eg/" target="_blank"><img class="w-100" src="images/img/philips 1.png" alt=""></a></i>
+
+                <li class="me-md-5"><a href="https://www.elarabygroup.com/ar/" target="_blank"><img class="w-100" src="images/img/toshiba-1 1.png" alt=""></a></i>
+                    <li class="me-md-5"><a href="https://www.samsung.com/eg/" target="_blank"><img class="w-100" src="images/img/samsung-4 1.png" alt=""></a></i>
+    </ul>
+</section>
+<footer class="footer bg-dark text-light pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 d-flex  flex-column">
+                <img class="w-50 mb-3  logo-footer " src="images/logo.png" alt="">
+                <span>Customer Supports:</span>
+                <h5 class="my-2">+201124231885</h4>
+                    <p class="mb-2">45 egypt Ave. Manchester, Kentucky 39495</p>
+                    <span>Happy@store.com</span>
+            </div>
+            <div class="col-md-2 link ">
+                <h6>TOP CATEGORY</h6>
+                <ul class="mt-3">
+                    <li class="my-1 hover">Computer & Laptop</li>
+                    <li class="my-1 hover">SmartPhone</li>
+                    <li class="my-1 hover">Headphone</li>
+                    <li class="my-1 hover">Accessories</li>
+                    <li class="my-1 hover">Camera & Photo</li>
+                    <li class="my-1 hover">TV & Homes</li>
+                    <div class="button d-flex align-items-center text-warning" justify-content-between w-10">
+                        <h6 class="me-2">Browse All Product</h6>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-md-2 link">
+                <h6>QUICK LINKS</h6>
+                <ul class="mt-3">
+                    <li class="my-1 hover">Shop Product</li>
+                    <li class="my-1 hover">Shoping Cart</li>
+                    <li class="my-1 hover">Wishlist</li>
+                    <li class="my-1 hover">Compare</li>
+                    <li class="my-1 hover">Track Order</li>
+                    <li class="my-1 hover">Customer Help </li>
+                    <li class="my-1 hover">About Us</li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6>DOWNLOAD APP</h6>
+                <div class="d-flex align-items-center justify-content-start flex-wrap mt-3 ">
+                    
+                    <a href="https://play.google.com/store/apps"><img class="mb-3  " src="images/img/Mobile App.png" alt=""></a>
+                    <a href="https://www.apple.com/eg-ar/app-store/"><img class="mb-3  " src="images/img/Mobile App (1).png" alt=""></a>
+
+                    <img class="mb-3    " src="" alt="">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h6>POPULAR TAG</h6>
+                <ul class="d-flex align-items-center justify-content-start flex-wrap mt-3 ">
+                    <li class="p-1 border my-2 me-2  hover">Game</li>
+                    <li class="p-1 border my-2 me-2 hover">iPhone</li>
+                    <li class="p-1 border my-2 me-2 hover">TV</li>
+                    <li class="p-1 border my-2 me-2 hover">Asus Laptops</li>
+                    <li class="p-1 border my-2 me-2 hover">Macbook </li>
+                    <li class="p-1 border my-2 me-2 hover">Graphics Card </li>
+                    <li class="p-1 border my-2 me-2 hover">Power Bank </li>
+                    <li class="p-1 border my-2 me-2 hover">Smart TV</li>
+                    <li class="p-1 border my-2 me-2 hover">Speaker</li>
+                    <li class="p-1 border my-2 me-2 hover">Tablet</li>
+                    <li class="p-1 border my-2 me-2 hover">Microwave</li>
+                    <li class="p-1 border my-2 me-2">Samsung</li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div style="border-top: 1px rgba(204, 204, 204, 0.413) solid;" class="text-center p-3 mt-3">
+        <p class="">Develop by Haytham 2023</p>
+    </div>
+</footer>
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<!-- owlcarousel -->
+<script src="js/jquery.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script>$(document).ready(function(){
+ $('.owl-carousel').owlCarousel({
+  loop:true,
+  margin:10,
+  responsiveClass:true,
+  responsive:{
+      0:{
+          items:1,
+          nav:true
+      },
+      600:{
+          items:3,
+          nav:false
+      },
+      1000:{
+          items:6,
+          loop:true
+      }
+  }
+})
+});
+</script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/signUp.js"></script>
+</body>
+</html>
