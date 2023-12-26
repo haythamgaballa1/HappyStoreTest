@@ -1,0 +1,333 @@
+/* xs mobile phones */
+@media (max-width:576px) {
+    /* Global Style*/
+    .round-price{
+
+         top:0;
+          left: 20px;
+
+    }
+    .container{
+        width: 100% !important;
+    }
+    .h-73px{
+        height: auto !important;
+    }
+    .fs-14px
+{
+    margin-top: 10px !important;
+    font-size: 14px !important;
+}
+    .component-star{
+        width: 100% !important;
+    }
+    .stars{
+        font-size: 80% !important;
+    }
+    .over-lay ul li {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .serv{
+        border-right: none !important;
+    }
+    .button_one {
+        padding: 4px !important;
+    }
+    .sale_content h3 {
+        font-size: 20px !important;
+    }
+    /* End  Global Style*/
+    /* nav_sale */
+    .nav_sale{
+    }
+
+    /* end nav_sale */
+
+    /* nav */
+    .menu {
+        display: inline !important;
+    }
+    .search{
+        display: none !important;
+    }
+
+    /* end nav */
+.head .header .carts-box {
+    background-color: red;
+}
+
+
+
+        .nav-logo{
+            padding: 10px !important;
+        }
+        .nav-logo .logo {
+            width: 120px !important;  
+        }
+        .Cart-box {
+            width: 80% !important;
+            top: 49px !important;
+        }
+
+    .nav_icon{
+        display: none;
+    }
+    .nav-filters-one{
+        display: none;
+
+    }
+    .nav-filters{
+        display: none;
+    }
+    .nav_icon .text-light{
+        flex-direction: column;
+    }
+    .Best-Dealsd-title{
+        width: 100%;
+    }
+    .cursor-pointer{
+        cursor: pointer !important;
+      }
+    .nav-logo .container{
+        padding: 0 !important;
+    }
+    .nav-logo .container ul li i{
+        margin-right: 5px !important;
+    }
+    .social_icon{
+        flex-direction: column !important;
+    }
+    .head{
+        padding: 0 !important;
+        margin-bottom: 30px;
+        flex-direction: column !important;
+    }
+    .two img {
+        width: 60% !important;
+    }
+    #element{
+        padding: 10px;
+        height: 40px;
+        margin: 5px !important;
+    }
+    .Deals-content{
+        flex-direction: column;
+    }
+    .Deals-Body .w-30{
+       display: none !important;
+    }
+    .Deals-body .d-flex{
+        width: 100% !important;
+    } 
+    .Deals-content .d-flex ul{
+        margin-top: 10px !important;
+        font-size: 16px !important;
+    } 
+    .Deals-content .d-flex ul li .button{
+        display: none !important;
+    }
+.Computer-Accessories-header .Accessories-title{
+         flex-direction: column !important;
+    }
+    .Computer-Accessories-Body .w-30{
+        display: none !important;
+    }
+    .Computer-Accessories-header .Accessories-title  ul li .button{
+        display: none !important;
+    }
+    .Subscribe-Sec p{
+        width: 80% !important;
+    }
+    .Subscribe-Sec ul{
+        width: 90% !important;
+    }
+    .Subscribe-Sec ul li img{
+        width: 80% !important;
+    }
+    .Subscribe-Sec hr{
+        width: 70%;
+    }
+    .sub{
+        width: 80% !important  ;
+    }
+    .logo-footer{
+        align-self: center;
+    }
+    .footer .col-md-3{
+        margin:0 0 20px 0;
+    }
+     .footer .link{
+        width: 50% !important;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .footer .col-md-2{
+        margin-top: 10px;
+    }
+    .footer .col-md-2 .d-flex>img{
+        margin-left: 30px;
+    }
+    .Best-Deals-header .Best-Dealsd-title{
+        flex-direction: column;
+    }
+    .Best-Deals-header .Best-Dealsd-title h2{
+        margin: 20px 0;
+    }
+    .nav-filters {
+        width: 100%;
+    }
+    .nav-filters.container .d-flex{
+        width: 10% !important;
+        background-color: #31921b !important;
+    }
+    .nav-filters .filters{
+        display: none;
+    }
+    .nav-filters .number{
+        display: none !important ;
+    }
+    .Track {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    .Track i {
+        display: block!important;
+    }
+    .serv{
+        height: 75px !important;
+        justify-content: start !important;
+    }
+    .sub{
+        width: 90% !important;
+    }
+    .sale_img{
+        display: none !important;
+    }
+    }
+@media (min-width: 577px) and (max-width: 1200px) {
+    .Deals-Body .banar {
+       display: none !important;
+    }
+    .banar-two{
+        display: none !important;
+    }
+    .Cart-box {
+        width: 40% !important;
+        
+    }
+}
+@media (max-width:575px),(max-width:1400px)
+{
+    .head-nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+    .head-nav .logo{
+        width: 10px;
+    }
+    .head-nav .logo img{
+        width:100% !important;
+    }
+    .head-content h1::after{
+        display: none;
+    }
+    .head-content h2{
+        width: 300px;
+    }
+    .head-imgs{
+        display: none;
+    }
+    nav .nav-bar {
+        transform: translateY(30px);
+    }
+    nav .nav-bar .links{
+        margin: auto;
+    }
+    nav .nav-bar .search{
+        display: none !important;
+    }
+    nav .nav-bar .links ul li
+    {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .header{
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-bottom: 10px !important;
+    }
+    .header .head-content{
+        width: 90% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-direction: column;
+    }
+    .Categories .Head-title{
+        text-align: center !important;
+    }
+    .Categories .box{
+        margin-bottom: 20px;
+    }
+    .container .prog{
+        text-align: center;
+        margin: auto;
+        color: brown;
+        padding: 10px !important;
+    }
+    .container .prog .bts{
+        display: inline !important;
+    }
+    .p-one{
+        width: 50%;
+    }
+    .center{
+        text-align: center;
+    }
+
+}
+@media (max-width:1770px)
+{
+    .Categories-card .filter {
+        background-color: aqua !important;
+        display: none;
+    }
+}
+@media (min-width:1771px)
+{
+    .filtery{
+        background-color: aqua !important;
+        display: none;
+    }
+}
+
+/* s mobile phones */
+
+/* Medium device */
+@media (min-width:768px)(max-width:992px)
+{
+    
+}
+
+/* Large devices */
+@media (min-width:993px)(max-width:1200px)
+{
+    
+}
+
+/* X-Large devices */
+@media (min-width:1201px)(max-width:1400px)
+{
+    
+}
+
+/* Xx-Large devices */
+@media (min-width:14001px)
+{
+    
+}

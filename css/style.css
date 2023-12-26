@@ -1,0 +1,349 @@
+:root{
+    --main-Color : #298089;
+    --main-font-family:'Unbounded', cursive;
+    --secondry-bg-color-nav : #1B6392;
+    --gray-bg :  #F2F4F5;
+    
+}
+.dark{
+    background-color: rgb(32, 32, 32);
+    color: gray;
+    transition: .8s;
+}
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.loading
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1B6392;
+}
+.loader {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: rotate(45deg);
+    overflow: hidden;
+  }
+  .loader:after{
+    content: '';
+    position: absolute;
+    inset: 8px;
+    margin: auto;
+    background: #1B6392;
+  }
+  .loader:before{
+    content: '';
+    position: absolute;
+    inset: -15px;
+    margin: auto;
+    background: white;
+    animation: diamondLoader 2s linear infinite;
+  }
+  @keyframes diamondLoader {
+    0%  ,10% {
+      transform: translate(-64px , -64px) rotate(-45deg)
+    }
+    90% , 100% {
+      transform: translate(0px , 0px) rotate(-45deg)
+    }
+  }
+.h-73px{
+   height: 73px !important; 
+}
+.bg-gray-900{
+    background-color: #f2f4f5;
+}
+.bg-orange{
+    background-color: #FA8232;
+}
+.text-orange{
+    color: #FA8232;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+h4{
+    font-size: 100%;
+}
+.load{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(120deg, #ffa4dc , #597ccd);
+}
+.lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.round-price{
+    border:4px solid white;
+     top:40px;
+      left: 70px;
+       background-color: rgb(245, 209, 164);
+        width: 100px;
+         height: 100px;
+}
+    /* side bar*/
+    .sidebar{
+        transition: 1s;
+        width: 100%;
+        background-color: #1B6392;
+    }
+    /* side bar */
+.hover{
+    transition: .3s;
+    cursor: pointer;
+}
+.hover:hover{
+    color: #FA8232 !important;
+}
+
+.Product{
+    transition: .3s;
+    cursor: pointer;
+}
+.Product:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.Product:hover .over-lay{
+
+    /* background-color: #2484C2; */
+    display: flex !important;
+}
+.banar-one{
+    height: 350px;
+}
+.cart {
+    cursor: pointer;
+}
+.cart-left {
+    transition: .5s;
+}
+.cart-left:hover {
+    box-shadow: rgba(245, 174, 98, 0.896) -5px 5px, rgba(245, 174, 98, 0.600) -10px 10px, rgba(245, 174, 98, 0.400) -15px 15px, rgba(245, 174, 98, 0.300) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+.cart-center {
+    transition: .5s;
+}
+.cart-center:hover {
+    box-shadow: rgba(245, 174, 98, 0.896) 0px 5px, rgba(245, 174, 98, 0.600) 0px 10px, rgba(245, 174, 98, 0.400) 0px 15px, rgba(245, 174, 98, 0.300) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+}
+.cart-right {
+    transition: .5s;
+}
+.cart-right:hover {
+    box-shadow: rgba(245, 174, 98, 0.896) 5px 5px, rgba(245, 174, 98, 0.600) 10px 10px, rgba(245, 174, 98, 0.400) 15px 15px, rgba(245, 174, 98, 0.300) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+.over-lay{
+    width: 100%;
+    background-color: rgba(199, 199, 199, 0.496);
+    display: none !important;
+    transition: 1s;
+}
+.gray-bg-color{
+    background-color: var(--gray-bg);
+}
+.text-gray{
+    color: #77878F;
+}
+.two-bg-color{
+    background-color: #191C1F;
+}
+.titles-bg-color{
+    background-color: #F3DE6D;
+}
+.bg-icon{
+    background-color: #FFE7D6;
+}
+.bg-orange-900{
+    background-color: #FFE7D6;
+}
+.sale_img{
+    width: 13%;
+}
+.two{
+    width: 100%;
+    height: 50%;
+}
+.secondry-color{
+    color: #2484C2;
+}
+a{
+    color: white ;
+    text-decoration: none;
+}
+a:hover{
+    color: #FA8232;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.typed-cursor{
+    display: none;
+}
+select{
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 5px;
+}
+option{
+    color: black;
+    padding: 50px;
+}
+select:focus{
+    border: none;
+    outline: none;
+}
+
+.button_one
+{
+    padding: 8px ;
+    border: none;
+    outline: none;
+    transition: .2s;
+}
+.button_one:hover{
+    background-color:transparent;
+    outline: #FA8232 solid 1px;
+    color: rgb(150, 99, 3);
+}
+.btn-orange{
+    background-color: #FA8232;
+    color: white;
+}
+.button_two
+{
+    padding: 8px 30px;
+    border: none;
+    outline: none;
+    transition: .2s;
+    background-color:transparent;
+    outline: #FA8232 solid 1px;
+    color: rgb(150, 99, 3);
+}
+.button_two:hover{
+    background-color: #FA8232;
+    color: white;
+}
+.fa-arrow-right{
+    transition: 1s;
+}
+.button{
+    cursor: pointer;
+}
+.price{
+    color: #2484C2;
+    font-weight: 500;
+}
+.w-10
+{
+    width: 12%;
+}
+.w-30{
+    width: 30%;
+}
+
+.arrow-slide{
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+}
+.arrow-left-slide{
+    
+    top: 50%;
+    left: -10px;
+    transform: translatey(-50% );
+
+}
+.arrow-right-slide{
+    top: 50%;
+    right: -10px;
+    transform: translatey(-50% );
+}
+nav{
+    z-index:545;
+}
+.nav_icon{
+    border-bottom: .2px rgba(191, 191, 191, 0.374) solid;
+}
+.nav-bg
+{
+    background-color: var(--secondry-bg-color-nav);
+}
+.logo{
+    width: 10%;
+}
+.search{
+    padding: 8px;
+    border-radius: 2px;
+    background-color: white;
+}
+.search-bar{
+    padding: 8px;
+    border-radius: 2px;
+    width: 80%;
+    
+}
+.search-bar input{
+    width: 80%;
+}
+.search input{
+    border: none;
+    outline: none;
+}
+.filters{
+    background-color: #F2F4F5;
+} 
+.nav-filters{
+
+   border-bottom: .2px rgba(191, 191, 191, 0.374) solid;
+} 
+
+.sub{
+    background-color: white;
+    padding: 10px 15px;
+    width: 30%;
+}
+.sub input{
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+.banar-yellow-bg{
+    background-color: #f3de6d;
+}
+.News-body p{
+
+}
+/* */
+/* .banar-two-img
+{
+    width: 90%;
+} 
+.banar-two-img img
+{
+    width: 100%;
+}  */
+
+
+/* slider css */
+.item{
+    cursor: pointer;
+}
+
+
+
